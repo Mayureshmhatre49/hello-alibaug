@@ -6,6 +6,18 @@
 
 /* Sources used by the build (keeps purge safe) */
 @layer utilities {
+    @keyframes shimmer {
+        0% {
+            background-position: -1000px 0;
+        }
+        100% {
+            background-position: 1000px 0;
+        }
+    }
+
+    .animate-shimmer {
+        animation: shimmer 2s infinite;
+    }
 }
 
 @layer base {

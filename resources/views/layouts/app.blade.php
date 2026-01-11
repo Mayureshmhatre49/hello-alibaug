@@ -8,6 +8,7 @@
     <meta name="description" content="@yield('meta_description', 'Discover the best villas, cafes and experiences in Alibaug.')">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
 <body class="bg-white text-gray-900 antialiased">
@@ -56,7 +57,7 @@
 
 {{-- FOOTER --}}
 
-<footer class="bg-gray-50 border-t border-gray-100 mt-24">
+<footer class="bg-gray-50 border-t border-gray-100">
     <div class="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
 
         {{-- Brand --}}
