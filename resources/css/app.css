@@ -1,0 +1,56 @@
+@reference "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sources used by the build (keeps purge safe) */
+@layer utilities {
+}
+
+@layer base {
+    a {
+        @apply no-underline text-inherit;
+    }
+
+    a:hover {
+        @apply text-emerald-600;
+    }
+}
+
+
+:root{
+    --brand-50: #f2fdf9;
+    --brand-100: #e6fbf4;
+    --brand-300: #6ee7b7;
+    --brand-500: #059669; /* emerald-600 */
+    --brand-600: #047857;
+    --muted: #6b7280;
+    --glass: rgba(255,255,255,0.7);
+    --card: #ffffff;
+}
+
+html,body{height:100%;}
+body{
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: linear-gradient(180deg,#f8faf9 0%, #ffffff 100%);
+    color: #0f172a;
+}
+
+/* Premium components */
+.btn-primary{
+    @apply inline-flex items-center justify-center rounded-xl px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-teal-500 to-emerald-500 shadow-lg;
+}
+
+.card{
+    background: var(--card);
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(2,6,23,0.06);
+}
+
+.glass-nav{backdrop-filter: blur(6px); background: rgba(255,255,255,0.6);} 
+
+/* Keep sources for the tooling/purge */
+@layer base {
+    /* blade/js sources for purge */
+}
