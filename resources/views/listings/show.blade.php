@@ -9,7 +9,7 @@
             {{-- Main Image --}}
             <div class="relative aspect-video md:aspect-auto md:h-[500px] overflow-hidden bg-slate-200 group">
                 <img
-                    src="{{ $listing->featured_image ?? 'https://via.placeholder.com/1200x675?text=' . urlencode($listing->title) }}"
+                    src="{{ 'storage/' . $listing->featured_image }}"
                     alt="{{ $listing->title }}"
                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
