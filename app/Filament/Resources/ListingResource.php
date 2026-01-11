@@ -13,6 +13,7 @@ use Illuminate\Support\Str;
 use Filament\Forms\Components\{
     TextInput,
     Textarea,
+    RichEditor,
     Select,
     Toggle,
     Section,
@@ -52,8 +53,23 @@ class ListingResource extends Resource
                         ->dehydrated()
                         ->required(),
 
-                    Textarea::make('description')
-                        ->rows(5),
+                    RichEditor::make('description')
+                        ->columnSpanFull()
+                        ->toolbarButtons([
+                            'attachFiles',
+                            'blockquote',
+                            'bold',
+                            'bulletList',
+                            'codeBlock',
+                            'heading',
+                            'italic',
+                            'link',
+                            'orderedList',
+                            'redo',
+                            'strike',
+                            'underline',
+                            'undo',
+                        ]),
 
                     Select::make('type')
                         ->label('Listing Type')
